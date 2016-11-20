@@ -1,0 +1,110 @@
+Part 1: Discussion Questions
+
+
+<Runtime>
+
+
+1. When calculating the Big O notation for a particular algorithm, it's necessary to consider the length of time it takes for the algorithm to run as the algorithm's workload approaches infinity. You can think of the workload as the number of tasks required to complete a job. What determines the workload of figuring out whether your box of animal crackers contains an elephant?
+
+
+Answer:
+O(n)
+
+Finding out if the box of animal crackers contains an elephant by taking out a cracker at a time. That calls for a for loop to iterate over a list or tuple. While order doesn't matter in this case, as you can select the one on top or put your hand into the cookies and dig out a random cookie, a set can only contain unique items. The box of animal crackers may contain more than one elepahant. The workload would be O(n)
+
+
+2. Order the following runtimes in descending order of efficiency (that is, fastest runtimes first, slowest last) as n approaches infinity:
+O(log n)
+O(n2)
+O(n log n)
+O(n)
+O(2^n) (i.e. 2 to the n-th power)
+O(1)
+
+Answer:
+O(1)
+O(log n)
+O(n)
+O(n log n)
+O(n2)
+O(2^n)
+
+
+
+<Stacks and Queues>
+
+
+1. In the following cases, would a stack or queue be a more appropriate data structure?
+
+
+1a. The process of loading and unloading pallets onto a flatbed truck
+
+Answer: Stack
+
+1b. Putting bottle caps on bottles of beer as they roll down an assembly line
+
+Answer: Queue
+
+1c. Calculating the solution to this mathematical expression: 2 + (7 * 4) - (3 / 2)
+
+Answer: Queue
+
+
+2. Describe two more situations where a queue would be an appropriate data structure.
+
+Answer:
+- Queue for shaking the President's hand at a meet and greet
+- Scanning items as the customer unloads it for checkout
+
+
+3. Describe two more situations where a stack would be an appropriate data structure.
+
+Answer:
+- Packing a box for moving, and unpacking it once moved
+- Putting cash into the cash register, and taking out cash to give change to the customer
+
+
+
+<Linked Lists>
+
+1. Given the linked list below, which are the nodes? What is the data for each node? Where is the head? Where is the tail? (Please be as specific as possible — exactly which parts of the diagram correspond to each part? Arrows? Boxes? Text?)
+
+Answer:
+- Nodes: "Apple" | next boxes, "Berry" | next boxes, "Cherry" | next boxes
+- Data: "Apple" text, "Berry" text, "Cherry" text
+- Head: head attribute on Llist object pointing to "Apple" | next boxes
+- Tail: the object with next attribute with arrow pointing to None, which is "Cherry" | next boxes object
+
+
+2. What's the difference between doubly- and singly-linked lists?
+
+Answer:
+The nodes of a doubly-linked list have both attributes for previous and next that have arrows that point to the previous node (if it exists) and the next node (if it exists or None if not).
+
+
+3. Why is it faster to append to a linked list if we keep track of the tail as an attribute?
+
+Answer:
+It's faster because you can just look at the tail attribute of the linked list, as opposed to iterating through each node to look for the node with None as the next value. Looking up the value of an attribute is O(1) while iterating over a linked list to look for the end is O(n).
+
+
+
+<Trees>
+
+
+1. Given the tree above, in what order would a Breadth First Search (BFS) algorithm visit each node until finding burrito (starting at food)? Just list the order of nodes visited; no need to recreate the state of the algorithm data in your answer.
+
+Answer:
+Food, Italian, Indian, Mexican, lasagna, pizza, tikka masala, saag, burrito
+
+
+2. Given the tree above, in what order would a Depth First Search (DFS) algorithm visit each node until finding Chicago-style (starting at food)? Just list the order of nodes visited; no need to recreate the state of the algorithm data in your answer.
+
+Answer:
+Food, Mexican, burrito
+
+
+3. How is a binary search tree different from other trees?
+
+Answer:
+Binary search trees are different from other trees in that each node on the binary search tree much have at most 2 children - a left childen and a right child. Also, there must be some sort of rule for constructing/arranging the tree, which will make it faster to search for an item in the tree.
